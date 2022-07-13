@@ -21,8 +21,7 @@
 
 #pragma once
 
-#include <atlcoll.h>
-#include <wxutil.h>
+
 #include "TextFile.h"
 #include "GFN.h"
 

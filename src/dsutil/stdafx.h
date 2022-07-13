@@ -42,7 +42,7 @@
 
 #include <Shlwapi.h>
 
-#include <atlcoll.h>
+
 #include <atlpath.h>
 
 #include <streams.h>

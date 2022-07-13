@@ -21,7 +21,7 @@
 
 #pragma once
 
-#include <atlcoll.h>
+
 #include "GlyphPath.h"
 #include "FontWrapper.h"
 #include "Rasterizer.h"

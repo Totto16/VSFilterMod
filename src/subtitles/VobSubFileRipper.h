@@ -21,7 +21,7 @@
 
 #pragma once
 
-#include <atlcoll.h>
+
 #include "decss\VobFile.h"
 #include "VobSubFile.h"
 

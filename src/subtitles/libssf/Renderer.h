@@ -34,9 +34,11 @@ protected:
     CAtlList<CStringW> m_objs;
     size_t m_limit;
 
+
 public:
     Cache(size_t limit)
     {
+        using namespace std
         m_limit = max(1, limit);
     }
     virtual ~Cache()

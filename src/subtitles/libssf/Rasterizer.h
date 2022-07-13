@@ -21,11 +21,11 @@
 
 #pragma once
 
-#include <atlcoll.h>
+
 #include "SubtitleFile.h"
 #include "Array.h"
 #include "GlyphPath.h"
-#include "..\..\SubPic\ISubPic.h"
+#include "../../subpic/ISubPic.h"
 
 namespace ssf
 {

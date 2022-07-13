@@ -21,7 +21,6 @@
 
 #pragma once
 
-#include <atlcoll.h>
 
 class CNullRenderer : public CBaseRenderer
 {

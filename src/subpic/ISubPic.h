@@ -21,8 +21,8 @@
 
 #pragma once
 
-#include <atlbase.h>
-#include <atlcoll.h>
+
+
 #include "CoordGeom.h"
 
 #pragma pack(push, 1)

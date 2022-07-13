@@ -21,7 +21,7 @@
 
 #pragma once
 
-#include <atlcoll.h>
+
 
 namespace ssf
 {

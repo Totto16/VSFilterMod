@@ -36,22 +36,19 @@
 #endif
 #define _ATL_APARTMENT_THREADED
 
-#include "..\DSUtil\SharedInclude.h"
+#include "../dsutil/SharedInclude.h"
 
-#include <afxwin.h>
-#include <afxdisp.h>
 
-#include <atlbase.h>
+
 //You may derive a class from CComModule and use it if you want to override
 //something, but do not change the name of _Module
 extern CComModule _Module;
-#include <atlcom.h>
+
 
 #define AFX_CLASS AFX_CLASS_IMPORT
 
-#include <streams.h>
-#include <dvdmedia.h>
-#include "..\DSUtil\DSUtil.h"
+
+#include "../dsutil/DSUtil.h"
 
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.

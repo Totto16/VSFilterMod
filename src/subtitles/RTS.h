@@ -23,7 +23,7 @@
 
 #include "STS.h"
 #include "Rasterizer.h"
-#include "..\SubPic\ISubPic.h"
+#include "../subpic/ISubPic.h"
 
 class CMyFont : public CFont
 {
@@ -166,9 +166,9 @@ public:
 
 enum eftype
 {
-    EF_MOVE = 0,	// {\move(x1=param[0], y1=param[1], x2=param[2], y2=param[3], t1=t[0], t2=t[1])} or {\pos(x=param[0], y=param[1])}
-    EF_ORG,			// {\org(x=param[0], y=param[1])}
-    EF_FADE,		// {\fade(a1=param[0], a2=param[1], a3=param[2], t1=t[0], t2=t[1], t3=t[2], t4=t[3])} or {\fad(t1=t[1], t2=t[2])
+    EF_MOVE = 0,	// {/move(x1=param[0], y1=param[1], x2=param[2], y2=param[3], t1=t[0], t2=t[1])} or {/pos(x=param[0], y=param[1])}
+    EF_ORG,			// {/org(x=param[0], y=param[1])}
+    EF_FADE,		// {/fade(a1=param[0], a2=param[1], a3=param[2], t1=t[0], t2=t[1], t3=t[2], t4=t[3])} or {/fad(t1=t[1], t2=t[2])
     EF_BANNER,		// Banner;delay=param[0][;lefttoright=param[1];fadeawaywidth=param[2]]
     EF_SCROLL,		// Scroll up/down=param[3];top=param[0];bottom=param[1];delay=param[2][;fadeawayheight=param[4]]
 #ifdef _VSMOD // patch m006. moveable vector clip

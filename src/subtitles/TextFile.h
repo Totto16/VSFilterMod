@@ -21,7 +21,7 @@
 
 #pragma once
 
-#include <afx.h>
+
 
 class CTextFile : protected CStdioFile
 {

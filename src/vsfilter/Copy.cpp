@@ -16,14 +16,12 @@
 // Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA, or visit
 // http://www.gnu.org/copyleft/gpl.html
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <math.h>
 #include "DirectVobSubFilter.h"
-#include "..\DSUtil\DSUtil.h"
-#include "..\DSUtil\MediaTypes.h"
+#include "../dsutil/DSUtil.h"
+#include "../dsutil/MediaTypes.h"
 
-#include <initguid.h>
-#include <moreuuids.h>
 
 extern int c2y_yb[256];
 extern int c2y_yg[256];
@@ -572,14 +570,14 @@ void CDirectVobSubFilter::PrintMessages(BYTE* pOut)
 
     if(m_fOSD)
     {
-        tmp.Format(_T("in: %dx%d %s\nout: %dx%d %s\n"),
+        tmp.Format(_T("in: %dx%d %s/nout: %dx%d %s/n"),
                    m_w, m_h,
                    Subtype2String(m_pInput->CurrentMediaType().subtype),
                    bihOut.biWidth, bihOut.biHeight,
                    Subtype2String(m_pOutput->CurrentMediaType().subtype));
         msg += tmp;
 
-        tmp.Format(_T("real fps: %.3f, current fps: %.3f\nmedia time: %d, subtitle time: %d [ms]\nframe number: %d (calculated)\nrate: %.4f\n"),
+        tmp.Format(_T("real fps: %.3f, current fps: %.3f/nmedia time: %d, subtitle time: %d [ms]/nframe number: %d (calculated)/nrate: %.4f/n"),
                    m_fps, m_fMediaFPSEnabled ? m_MediaFPS : fabs(m_fps),
                    (int)m_tPrev.Millisecs(), (int)(CalcCurrentTime() / 10000),
                    (int)(m_tPrev.m_time * m_fps / 10000000),
@@ -593,13 +591,13 @@ void CDirectVobSubFilter::PrintMessages(BYTE* pOut)
             int nSubPics = -1;
             REFERENCE_TIME rtNow = -1, rtStart = -1, rtStop = -1;
             m_pSubPicQueue->GetStats(nSubPics, rtNow, rtStart, rtStop);
-            tmp.Format(_T("queue stats: %I64d - %I64d [ms]\n"), rtStart / 10000, rtStop / 10000);
+            tmp.Format(_T("queue stats: %I64d - %I64d [ms]/n"), rtStart / 10000, rtStop / 10000);
             msg += tmp;
 
             for(ptrdiff_t i = 0; i < nSubPics; i++)
             {
                 m_pSubPicQueue->GetStats(i, rtStart, rtStop);
-                tmp.Format(_T("%d: %I64d - %I64d [ms]\n"), i, rtStart / 10000, rtStop / 10000);
+                tmp.Format(_T("%d: %I64d - %I64d [ms]/n"), i, rtStart / 10000, rtStop / 10000);
                 msg += tmp;
             }
 

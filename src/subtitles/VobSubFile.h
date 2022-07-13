@@ -21,9 +21,9 @@
 
 #pragma once
 
-#include <atlcoll.h>
+
 #include "VobSubImage.h"
-#include "..\SubPic\ISubPic.h"
+#include "../subpic/ISubPic.h"
 
 #define VOBSUBIDXVER 7
 

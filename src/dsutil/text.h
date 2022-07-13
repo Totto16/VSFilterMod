@@ -1,6 +1,6 @@
 #pragma once
 
-#include <atlcoll.h>
+
 
 // extern CString ExplodeMin(CString str, CAtlList<CString>& sl, TCHAR sep, int limit = 0);
 // extern CString Explode(CString str, CAtlList<CString>& sl, TCHAR sep, int limit = 0);
